@@ -1,0 +1,165 @@
+.graph-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* 追加: 横幅が足りない場合折り返す */
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; /* 追加: オプションボタンの絶対配置用 */
+}
+
+.graph-selector-card {
+  background: #e7f1fb;
+  border-radius: 4px;
+  padding: 5px 12px 5px 12px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.graph-selector-header {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #1976d2;
+  letter-spacing: 0.01em;
+}
+
+.graph-selector-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap; /* 追加: ボタンやセレクトが溢れたら折り返す */
+}
+
+.graph-selector-btn {
+  background: #f5f5f5;
+  border: 1.2px solid #bbb;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  color: #333;
+  min-width: 48px;
+}
+
+.graph-selector-btn.selected,
+.graph-selector-btn:active {
+  background: #1976d2;
+  color: #fff;
+  border-color: #1976d2;
+}
+
+.graph-selector-btn:hover:not(.selected) {
+  background: #e0e0e0;
+  border-color: #888;
+}
+
+.graph-selector-dropdown {
+  margin-left: 2px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 0.8rem;
+  background: #fff;
+  color: #1976d2;
+  outline: none;
+  transition: border 0.2s;
+  height: 26px;
+}
+
+.graph-selector-dropdown:focus {
+  border-color: #1976d2;
+}
+
+.graph-overlay-controls {
+  display: flex;
+  flex-direction: row; /* 横並びに変更 */
+  flex-wrap: wrap;     /* 折り返し対応 */
+  gap: 10px 16px;      /* 横:16px, 縦:10px */
+  margin-left: 8px;
+  margin-top: 4px;
+  font-size: 0.95em;
+  align-items: flex-start;
+  min-width: 200px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  justify-content: flex-end; /* 右寄せ */
+}
+.graph-overlay-controls label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* オプションボタンとトグル表示用のスタイル */
+.graph-header-options-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 120px;
+  gap: 4px;
+  position: absolute;      /* 追加: 右上に固定 */
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: transparent; /* 背景は透明 */
+}
+
+.graph-header-options-btn {
+  background: #f5f5f5;
+  border: 1.2px solid #bbb;
+  border-radius: 5px;
+  padding: 2px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #1976d2;
+  font-weight: bold;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.graph-header-options-btn:hover,
+.graph-header-options-btn:focus {
+  background: #e7f1fb;
+  border-color: #1976d2;
+  color: #1565c0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+  .graph-header {
+    flex-direction: column;
+    gap: 8px;
+    padding: 3px 0 6px 0;
+  }
+  .graph-selector-card {
+    min-width: 0;
+    width: 100%;
+    padding: 7px 6px 7px 6px;
+  }
+  .graph-header-options-toggle {
+    position: static; /* モバイルでは絶対配置解除 */
+    align-items: flex-end;
+    margin-left: 0;
+    width: 100%;
+  }
+  .graph-overlay-controls {
+    margin-left: 0;
+    width: 100%;
+    gap: 8px 8px;
+    justify-content: flex-start;
+  }
+}

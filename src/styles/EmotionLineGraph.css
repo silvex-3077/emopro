@@ -1,0 +1,21 @@
+.emotion-line-graph-container {
+  width: 100vw;
+  height: 35vh;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.emotion-line-graph-canvas {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .emotion-line-graph-container {
+    height: 100px; /* 小さい画面では高さを調整 */
+    margin: 10px auto;
+  }
+}

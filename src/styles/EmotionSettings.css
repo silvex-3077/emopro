@@ -1,0 +1,98 @@
+/* 感情設定パネル */
+.emotion-settings-panel {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.2rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* チェックボックスエリア */
+.emotion-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.2rem;
+}
+
+.emotion-checkbox-controls {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.select-all-button,
+.clear-all-button {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.2rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select-all-button:hover,
+.clear-all-button:hover {
+  background-color: #f3f4f6;
+}
+
+.emotion-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  font-size: 0.75rem;
+}
+
+.emotion-checkbox-label:hover {
+  background-color: #f3f4f6;
+}
+
+.emotion-color-indicator {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+
+/* しきい値設定エリア */
+.threshold-setting {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.2rem;
+}
+
+.threshold-setting label {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.threshold-setting input {
+  width: 5rem;
+  padding: 0.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.2rem;
+}
+
+.threshold-description {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
