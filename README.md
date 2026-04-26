@@ -1,6 +1,6 @@
 # emopro
 
-<!-- ここに画像を挿入する -->
+![gif](https://github.com/silvex-3077/emopro/blob/main/images/emopro.gif)
 
 ## OverView
 
@@ -56,5 +56,8 @@ python -m eel run.py dist --onefile --name emopro --add-data "src/models;src/mod
 
 - `ト書き`
 - `キャラクター名「セリフ」`
+
+表示されたグラフにおける、それぞれの色に対応する感情は以下の画像の通り
+![png](https://github.com/silvex-3077/emopro/blob/main/images/graph.png)
 
 ※ 不具合のため、入力時に正しく結果が反映されないことがあります
